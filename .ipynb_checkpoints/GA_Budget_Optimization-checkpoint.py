@@ -85,11 +85,9 @@ budget = 1500
 population_size = 100
 generations = 100
 mutation_rate = 0.1
+fitness_values = [fitness(chromosome, budget) for chromosome in population] # fitness value in here
 best_chromosome = genetic_algorithm(budget, population_size, generations, mutation_rate)
 print(f"Best chromosome: {best_chromosome}, Fitness: {fitness(best_chromosome, budget)}")
-
-
-
 
 
 generations = list(range(0, 100))
@@ -99,4 +97,11 @@ plt.plot(generations, fitness_values)
 plt.xlabel("Generation")
 plt.ylabel("Fitness Score")
 plt.title("Fitness Score vs Generation")
-plt.show()
+plt.savefig("images/genereation_fitnessvalue.png",dpi=120) 
+# plt.show()
+plt.close()
+
+
+with open("metrics.txt", 'w') as outfile:
+        outfile.write(f"Best chromosome: {best_chromosome}, Fitness: {fitness(best_chromosome, budget)}")
+        
