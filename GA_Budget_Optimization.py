@@ -100,7 +100,7 @@ plt.plot(generations, fitness_values)
 plt.xlabel("Generation")
 plt.ylabel("Fitness Score")
 plt.title("Fitness Score vs Generation")
-plt.savefig("images/generation_fitnessvalue.png",dpi=120) 
+plt.savefig("images/generation_fitnessvalue.jpg",dpi=120) 
 # plt.show()
 plt.close()
 
