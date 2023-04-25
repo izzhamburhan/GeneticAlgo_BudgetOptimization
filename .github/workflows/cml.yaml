@@ -34,5 +34,4 @@ jobs:
           echo '## Data Viz' > report.md
           echo '![](./images/genereation_fitnessvalue.png)' >> report.md
           
-          
           cml comment create --publish report.md
