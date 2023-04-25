@@ -19,7 +19,7 @@ jobs:
       - name: Train model
         run: |
           # Your ML workflow goes here
-          pip install requirement.txt
+          pip3 install -r requirements.txt
           python GA_Budget_Optimization.py
           
       - name: Create CML report
