@@ -89,8 +89,8 @@ best_chromosome = genetic_algorithm(budget, population_size, generations, mutati
 print(f"Best chromosome: {best_chromosome}, Fitness: {fitness(best_chromosome, budget)}")
 
 
-
-
+population = [{ 'Shopping': random.randint(0, 150), 'Food & Drink': random.randint(250, 300), 'Life & Entertainment': random.randint(100, 200), 'Vehicle': random.randint(200, 400), 'Housing': random.randint(200, 350), 'Education':random.randint(0,150)} for i in range(population_size)]
+fitness_values = [fitness(chromosome, budget) for chromosome in population] # fitness value in here
 
 generations = list(range(0, 100))
 # fitness_scores = [-0.8, -0.6, -0.4, -0.2, 0.0, 0.2, 0.4, 0.6, 0.8, 1.0]  # Replace with actual fitness scores
@@ -99,4 +99,11 @@ plt.plot(generations, fitness_values)
 plt.xlabel("Generation")
 plt.ylabel("Fitness Score")
 plt.title("Fitness Score vs Generation")
-plt.show()
+plt.savefig("images/generation_fitnessvalue.jpg",dpi=120) 
+# plt.show()
+plt.close()
+
+
+with open("metrics.txt", 'w') as outfile:
+        outfile.write(f"Best chromosome: {best_chromosome}, Fitness: {fitness(best_chromosome, budget)}")
+        

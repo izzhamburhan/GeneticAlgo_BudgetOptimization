@@ -89,7 +89,6 @@ best_chromosome = genetic_algorithm(budget, population_size, generations, mutati
 print(f"Best chromosome: {best_chromosome}, Fitness: {fitness(best_chromosome, budget)}")
 
 
-
 population = [{ 'Shopping': random.randint(0, 150), 'Food & Drink': random.randint(250, 300), 'Life & Entertainment': random.randint(100, 200), 'Vehicle': random.randint(200, 400), 'Housing': random.randint(200, 350), 'Education':random.randint(0,150)} for i in range(population_size)]
 fitness_values = [fitness(chromosome, budget) for chromosome in population] # fitness value in here
 
