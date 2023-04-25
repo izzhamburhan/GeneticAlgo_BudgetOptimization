@@ -85,6 +85,7 @@ budget = 1500
 population_size = 100
 generations = 100
 mutation_rate = 0.1
+fitness_values = [fitness(chromosome, budget) for chromosome in population] # fitness value in here
 best_chromosome = genetic_algorithm(budget, population_size, generations, mutation_rate)
 print(f"Best chromosome: {best_chromosome}, Fitness: {fitness(best_chromosome, budget)}")
 
