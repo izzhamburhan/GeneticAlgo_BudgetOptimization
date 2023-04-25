@@ -21,7 +21,7 @@ jobs:
           # Your ML workflow goes here
           # pip3 install -r requirement.txt
           python -m pip install -r requirement.txt
-          python GA_Budget_Optimization.py
+          # python GA_Budget_Optimization.py
           
       - name: Create CML report
         env:
