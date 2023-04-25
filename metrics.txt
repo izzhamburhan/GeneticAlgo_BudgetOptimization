@@ -1,0 +1,1 @@
+Best chromosome: {'Shopping': 35, 'Food & Drink': 276, 'Life & Entertainment': 110, 'Vehicle': 216, 'Housing': 200, 'Education': 0}, Fitness: 0.442
