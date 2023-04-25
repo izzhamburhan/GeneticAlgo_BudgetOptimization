@@ -28,10 +28,10 @@ jobs:
         run: |
           # Post CML report as a comment in GitHub
           
-          echo '## MODEL METRICS.' > report.md
+          echo '## MODEL METRICS.' >> report.md
           cat metrics.txt >> report.md
           
           echo '## Data Viz' > report.md
-          echo '![](./images/generation_fitnessvalue.jpg)' >> report.md
+          echo '![](./images/generation_fitnessvalue.jpg)'>>report.md
           
           cml comment create --publish report.md
